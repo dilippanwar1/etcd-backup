@@ -74,15 +74,15 @@ func loadConfigFile(configPath *string) *Config {
 	file, error := os.Open(*configPath)
 	defer file.Close()
 	if error != nil {
-		config.LogPrintln("Default options: ")
+		log.Println("Default options: ")
 		flag.PrintDefaults()
-		config.LogFatal("Error when trying to open the configuration file `"+*configPath+"`. Error: ", error)
+		log.Fatal("Error when trying to open the configuration file `"+*configPath+"`. Error: ", error)
 	}
 
 	currentConfig := &Config{}
 	jsonParser := json.NewDecoder(file)
 	if err := jsonParser.Decode(currentConfig); err != nil {
-		config.LogFatal("Error when trying to load config file set into json. Error: ", err)
+		log.Fatal("Error when trying to load config file set into json. Error: ", err)
 	}
 
 	return currentConfig
