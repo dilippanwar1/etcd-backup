@@ -82,7 +82,7 @@ func loadConfigFile(configPath *string) *Config {
 	currentConfig := &Config{}
 	jsonParser := json.NewDecoder(file)
 	if err := jsonParser.Decode(currentConfig); err != nil {
-		config.LogFatal("Error when trying to load config file set into json. Error: ", err)
+		log.Fatal("Error when trying to load config file set into json. Error: ", err)
 	}
 
 	return currentConfig
