@@ -9,7 +9,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/coreos/go-etcd/etcd"
+	"github.com/soundcloud/go-etcd/etcd"
 )
 
 func LoadDataSet(dumpFilePath string) *[]BackupKey {

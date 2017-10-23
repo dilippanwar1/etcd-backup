@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/go-etcd/etcd"
+	"github.com/soundcloud/go-etcd/etcd"
 )
 
 func TestIsDirectory(t *testing.T) {

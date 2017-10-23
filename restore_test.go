@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/coreos/go-etcd/etcd"
+	"github.com/soundcloud/go-etcd/etcd"
 )
 
 func TestLoadDataSet(t *testing.T) {

@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/coreos/go-etcd/etcd"
+	"github.com/soundcloud/go-etcd/etcd"
 	"github.com/stretchr/testify/mock"
 )
 
